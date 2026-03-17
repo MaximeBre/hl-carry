@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+xgboost>=2.0
+optuna>=3.0
+scikit-learn>=1.3
+requests>=2.31
+hyperliquid-python-sdk>=0.5
+scipy>=1.11
+matplotlib>=3.7
+pyarrow>=14.0
+eth-account>=0.10

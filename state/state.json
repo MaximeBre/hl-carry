@@ -1,0 +1,12 @@
+{
+  "last_update": null,
+  "portfolio_value": 1000.0,
+  "run_count": 0,
+  "positions": {
+    "BTC":  {"symbol": "BTC",  "state": "FLAT", "position_size": 0.0, "entry_time": null, "entry_price": 0.0, "entry_prediction": 0.0, "hours_held": 0, "api_fail_count": 0, "frozen": false, "last_update": null, "history": []},
+    "ETH":  {"symbol": "ETH",  "state": "FLAT", "position_size": 0.0, "entry_time": null, "entry_price": 0.0, "entry_prediction": 0.0, "hours_held": 0, "api_fail_count": 0, "frozen": false, "last_update": null, "history": []},
+    "SOL":  {"symbol": "SOL",  "state": "FLAT", "position_size": 0.0, "entry_time": null, "entry_price": 0.0, "entry_prediction": 0.0, "hours_held": 0, "api_fail_count": 0, "frozen": false, "last_update": null, "history": []},
+    "AVAX": {"symbol": "AVAX", "state": "FLAT", "position_size": 0.0, "entry_time": null, "entry_price": 0.0, "entry_prediction": 0.0, "hours_held": 0, "api_fail_count": 0, "frozen": false, "last_update": null, "history": []},
+    "XRP":  {"symbol": "XRP",  "state": "FLAT", "position_size": 0.0, "entry_time": null, "entry_price": 0.0, "entry_prediction": 0.0, "hours_held": 0, "api_fail_count": 0, "frozen": false, "last_update": null, "history": []}
+  }
+}

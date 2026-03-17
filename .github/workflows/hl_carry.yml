@@ -1,0 +1,56 @@
+name: HL Carry Hourly
+
+on:
+  schedule:
+    # Run every hour at minute 5 (5 min after HL settlement at :00)
+    - cron: '5 * * * *'
+  workflow_dispatch:    # manual trigger via GitHub UI
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # needed to push state.json + dashboard
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          # Fetch full history so git push works correctly
+          fetch-depth: 1
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Run hourly paper trading loop
+        env:
+          BINANCE_API_KEY:       ${{ secrets.BINANCE_API_KEY }}
+          BINANCE_API_SECRET:    ${{ secrets.BINANCE_API_SECRET }}
+          HL_AGENT_PRIVATE_KEY:  ${{ secrets.HL_AGENT_PRIVATE_KEY }}
+          PAPER_TRADING:         "true"
+        run: python -m execution.paper_trading
+
+      - name: Generate dashboard
+        run: python generate_dashboard.py
+
+      - name: Commit updated state and dashboard
+        run: |
+          git config user.name  "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add state/ outputs/
+          # Only commit if there are actual changes
+          git diff --staged --quiet || git commit -m "Hourly update $(date -u +%Y-%m-%dT%H:%M)Z"
+          git push
