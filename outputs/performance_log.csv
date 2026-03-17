@@ -1,3 +1,4 @@
 timestamp,portfolio_value,pred_BTC,pred_ETH,pred_SOL,pred_AVAX,pred_XRP,action_BTC,action_ETH,action_SOL,action_AVAX,action_XRP
 2026-03-17T13:00:00+00:00,1000,,,,,,none,none,none,none,none
 2026-03-17T15:00:00+00:00,1000.0,,,,,,none,none,none,none,none
+2026-03-17T17:00:00+00:00,1000.0,,,,,,none,none,none,none,none
