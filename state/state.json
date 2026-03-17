@@ -1,7 +1,7 @@
 {
-  "last_update": "2026-03-17T13:48:26.792899+00:00",
-  "portfolio_value": 1000,
-  "run_count": 1,
+  "last_update": "2026-03-17T15:13:57.684917+00:00",
+  "portfolio_value": 1000.0,
+  "run_count": 2,
   "positions": {
     "BTC": {
       "symbol": "BTC",
@@ -13,7 +13,7 @@
       "hours_held": 0,
       "api_fail_count": 0,
       "frozen": false,
-      "last_update": "2026-03-17T13:48:00.446707+00:00",
+      "last_update": "2026-03-17T15:13:32.373733+00:00",
       "history": []
     },
     "ETH": {
@@ -26,7 +26,7 @@
       "hours_held": 0,
       "api_fail_count": 0,
       "frozen": false,
-      "last_update": "2026-03-17T13:48:07.695217+00:00",
+      "last_update": "2026-03-17T15:13:38.917795+00:00",
       "history": []
     },
     "SOL": {
@@ -39,7 +39,7 @@
       "hours_held": 0,
       "api_fail_count": 0,
       "frozen": false,
-      "last_update": "2026-03-17T13:48:14.660945+00:00",
+      "last_update": "2026-03-17T15:13:45.167568+00:00",
       "history": []
     },
     "AVAX": {
@@ -52,7 +52,7 @@
       "hours_held": 0,
       "api_fail_count": 0,
       "frozen": false,
-      "last_update": "2026-03-17T13:48:20.720172+00:00",
+      "last_update": "2026-03-17T15:13:51.447934+00:00",
       "history": []
     },
     "XRP": {
@@ -65,7 +65,7 @@
       "hours_held": 0,
       "api_fail_count": 0,
       "frozen": false,
-      "last_update": "2026-03-17T13:48:26.792845+00:00",
+      "last_update": "2026-03-17T15:13:57.684874+00:00",
       "history": []
     }
   }
